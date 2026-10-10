@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Game Style Icons: 100 icons in 50 video-game styles</title>
+<meta name="description" content="5,000 SVG icons for any stack: the same 100 interface and game icons drawn in 50 styles inspired by video games. Web component, React, SVG strings and plain SVG. MIT licence.">
+<meta property="og:title" content="Game Style Icons">
+<meta property="og:description" content="The same 100 icons in 50 styles inspired by video games. Works in any code.">
+<meta property="og:image" content="https://icons.horly.dev/docs/overview.webp">
+<meta property="og:url" content="https://icons.horly.dev/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fdfdfb">
+<link rel="icon" type="image/svg+xml" href="svg/super-mario/gamepad.svg">
+<link rel="preload" href="site/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site/fonts.css">
+<link rel="stylesheet" href="site/style.css">
+<script type="module" src="src/element.js"></script>
+<script type="module" src="site/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#start">Skip to getting started</a>
+
+<nav class="tabs" aria-label="Manual pages">
+  <a href="#cover"><b>1</b><span>Cover</span></a>
+  <a href="#start"><b>2</b><span>Start</span></a>
+  <a href="#controls"><b>4</b><span>Controls</span></a>
+  <a href="#worlds"><b>6</b><span>Worlds</span></a>
+  <a href="#items"><b>10</b><span>Items</span></a>
+  <a href="#warning"><b>14</b><span>Warning</span></a>
+</nav>
+
+<main>
+  <!-- 1 · Cover -->
+  <section id="cover" class="cover band-ink" aria-labelledby="cover-title">
+    <div class="cover-top">
+      <a class="repo" href="https://github.com/horlesq/game-style-icons">horlesq / game-style-icons</a>
+      <a class="star" href="https://github.com/horlesq/game-style-icons"><span class="ui-icon" data-icon="star"></span>Star on GitHub</a>
+    </div>
+    <div class="cover-body">
+      <div class="cover-copy">
+        <h1 id="cover-title" class="title">Game<br>Style<br>Icons</h1>
+        <p class="lede">100 items. 50 worlds. Works in any code.</p>
+        <p class="cover-text">The same 100 icons, drawn in 50 styles inspired by video games. Use them as a web component in any framework, as React components, as SVG strings, or as plain SVG files.</p>
+        <div class="slot" data-install>
+          <div class="slot-tabs" role="tablist" aria-label="How to get it">
+            <button role="tab" id="tab-npm" aria-selected="true" aria-controls="slot-code" data-install-tab="npm">npm</button>
+            <button role="tab" id="tab-cdn" aria-selected="false" aria-controls="slot-code" data-install-tab="cdn">No install (CDN)</button>
+          </div>
+          <div class="slot-row" id="slot-code" role="tabpanel">
+            <code class="slot-code" data-install-code>npm install github:horlesq/game-style-icons</code>
+            <button class="btn btn-primary" data-copy-install><span class="ui-icon" data-icon="copy"></span><span data-label>Copy</span></button>
+          </div>
+        </div>
+        <p class="cover-links"><a href="#worlds">Choose your world</a><a href="#items">See all 100 items</a></p>
+      </div>
+      <figure class="itembox" aria-label="One item, stepping through all 50 worlds">
+        <button class="box" data-cover-use type="button">
+          <span class="box-icon" data-cover-icon></span>
+          <span class="visually-hidden">Print the manual in this world</span>
+        </button>
+        <figcaption>
+          <span class="box-name"><span data-cover-name>Super Mario</span> <span class="box-level" data-cover-level>2-7</span></span>
+          <span class="box-actions">
+            <button type="button" class="link-btn" data-cover-use>Use this world</button>
+            <button type="button" class="link-btn" data-cover-pause aria-pressed="false">Pause</button>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+    <span class="folio folio-right" aria-hidden="true">1</span>
+  </section>
+
+  <!-- 2–3 · Getting started -->
+  <section id="start" class="spread" aria-labelledby="start-title">
+    <div class="band band-ink"><h2 id="start-title">Getting started</h2></div>
+    <div class="pages">
+      <div class="pg pg-left">
+        <ol class="steps">
+          <li>
+            <h3>Insert the Game Pak</h3>
+            <p>Install the package from GitHub. It is not on npm yet. No build step? Load the web component from a CDN and skip the install.</p>
+            <pre class="code"><code>npm install github:horlesq/game-style-icons</code></pre>
+          </li>
+          <li>
+            <h3>Pick how you play</h3>
+            <p>The same items under the same names, four ways. React is optional; only the React components need it.</p>
+            <div class="stack-tabs" role="tablist" aria-label="Stack">
+              <button role="tab" data-stack="element" aria-selected="true">Any framework</button>
+              <button role="tab" data-stack="react" aria-selected="false">React</button>
+              <button role="tab" data-stack="string" aria-selected="false">SVG string</button>
+              <button role="tab" data-stack="svg" aria-selected="false">SVG file</button>
+            </div>
+            <p class="stack-note" data-stack-note></p>
+          </li>
+          <li>
+            <h3>Use an item</h3>
+            <p>Every world draws the same 100 items, so changing the look of a whole interface is changing one word: the world.</p>
+          </li>
+        </ol>
+        <span class="folio folio-left" aria-hidden="true">2</span>
+      </div>
+      <div class="pg pg-right">
+        <figure class="fig">
+          <pre class="code code-big"><code data-code="start"></code></pre>
+          <div class="screen screen-row" data-start-screen></div>
+          <figcaption><b>Fig. 1</b> <span data-start-caption></span></figcaption>
+        </figure>
+        <button class="btn" data-copy-code="start"><span class="ui-icon" data-icon="copy"></span><span data-label>Copy code</span></button>
+        <span class="folio folio-right" aria-hidden="true">3</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4–5 · Controls -->
+  <section id="controls" class="spread" aria-labelledby="controls-title">
+    <div class="band band-ink"><h2 id="controls-title">Controls</h2></div>
+    <div class="pages">
+      <div class="pg pg-left">
+        <p class="intro">Try any item before you install. Use the pad with a mouse or a finger, or focus it and use the arrow keys, A and B.</p>
+        <div class="pad" data-pad tabindex="0" role="group" aria-label="Controller. Arrow keys change world and size, A copies the code, B shows the next item.">
+          <svg class="pad-art" viewBox="0 0 800 400" aria-hidden="true">
+            <g class="pad-lines">
+              <path d="M245 126V44"/><path d="M186 186H66V108"/><path d="M612 140V44"/><path d="M528 230v120"/><path d="M365 238l-40 112"/><path d="M432 238l12 112"/>
+            </g>
+            <g class="pad-labels">
+              <text x="245" y="30" text-anchor="middle">UP · DOWN</text><text x="245" y="12" text-anchor="middle" class="pad-sub">size</text>
+              <text x="66" y="94" text-anchor="middle">LEFT · RIGHT</text><text x="66" y="76" text-anchor="middle" class="pad-sub">world</text>
+              <text x="612" y="30" text-anchor="middle">A</text><text x="612" y="12" text-anchor="middle" class="pad-sub">copy code</text>
+              <text x="528" y="372" text-anchor="middle">B</text><text x="528" y="392" text-anchor="middle" class="pad-sub">next item</text>
+              <text x="310" y="372" text-anchor="middle">SELECT</text><text x="310" y="392" text-anchor="middle" class="pad-sub">stack</text>
+              <text x="448" y="372" text-anchor="middle">START</text><text x="448" y="392" text-anchor="middle" class="pad-sub">screen</text>
+            </g>
+            <rect class="pad-body" x="130" y="70" width="540" height="232" rx="116"/>
+            <path class="pad-dpad" d="M227 128h36v40h40v36h-40v40h-36v-40h-40v-36h40Z"/>
+            <circle class="pad-b" cx="528" cy="206" r="30"/>
+            <circle class="pad-a" cx="612" cy="168" r="30"/>
+            <rect class="pad-pill" x="337" y="206" width="56" height="18" rx="9" transform="rotate(-24 365 215)"/>
+            <rect class="pad-pill" x="404" y="206" width="56" height="18" rx="9" transform="rotate(-24 432 215)"/>
+          </svg>
+          <button type="button" class="pad-hit" style="left:28.4%;top:32%;width:4.5%;height:10%" data-pad-act="up" aria-label="Up: bigger"></button>
+          <button type="button" class="pad-hit" style="left:28.4%;top:51%;width:4.5%;height:10%" data-pad-act="down" aria-label="Down: smaller"></button>
+          <button type="button" class="pad-hit" style="left:23.4%;top:42%;width:5%;height:9%" data-pad-act="left" aria-label="Left: previous world"></button>
+          <button type="button" class="pad-hit" style="left:32.9%;top:42%;width:5%;height:9%" data-pad-act="right" aria-label="Right: next world"></button>
+          <button type="button" class="pad-hit round" style="left:62.25%;top:44%;width:7.5%;height:15%" data-pad-act="b" aria-label="B: next item"></button>
+          <button type="button" class="pad-hit round" style="left:72.75%;top:34.5%;width:7.5%;height:15%" data-pad-act="a" aria-label="A: copy code"></button>
+          <button type="button" class="pad-hit" style="left:41.6%;top:49.5%;width:7.2%;height:7%" data-pad-act="select" aria-label="Select: change stack"></button>
+          <button type="button" class="pad-hit" style="left:50%;top:49.5%;width:7.2%;height:7%" data-pad-act="start" aria-label="Start: dark or paper screen"></button>
+        </div>
+        <table class="options">
+          <caption>Options</caption>
+          <thead><tr><th scope="col">Setting</th><th scope="col">Takes</th><th scope="col">Default</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><code>size</code></th><td>a number (px) or any CSS length</td><td><code>1em</code>, follows the text</td></tr>
+            <tr><th scope="row"><code>label</code> · <code>title</code></th><td>the accessible name (<code>label</code> on the element, <code>title</code> in React and strings)</td><td>none: hidden from screen readers</td></tr>
+            <tr><th scope="row"><code>class</code> · <code>className</code></th><td>your class, for colour or alignment</td><td>none</td></tr>
+            <tr><th scope="row">anything else</th><td>passed to the <code>&lt;svg&gt;</code>: <code>style</code>, <code>onClick</code>, <code>aria-*</code>; React forwards the <code>ref</code></td><td></td></tr>
+          </tbody>
+        </table>
+        <span class="folio folio-left" aria-hidden="true">4</span>
+      </div>
+      <div class="pg pg-right">
+        <figure class="fig">
+          <div class="screen screen-stage" data-pad-screen><game-icon data-pad-icon set="super-mario" name="sword" size="64"></game-icon></div>
+          <figcaption><b>Fig. 2</b> <span data-pad-caption></span></figcaption>
+        </figure>
+        <pre class="code"><code data-code="pad"></code></pre>
+        <p class="live" role="status" data-pad-status></p>
+        <span class="folio folio-right" aria-hidden="true">5</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6–9 · Worlds -->
+  <section id="worlds" class="spread" aria-labelledby="worlds-title">
+    <div class="band band-ink"><h2 id="worlds-title">Worlds</h2></div>
+    <div class="pages pages-flow">
+      <p class="intro wide">Every world draws the same 100 items. Pick one and the whole manual reprints in it: the items, the code, this booklet's ink. Your world is remembered for next time.</p>
+      <div class="worlds" data-worlds role="radiogroup" aria-label="Worlds"></div>
+      <span class="folio folio-left" aria-hidden="true">6</span>
+      <span class="folio folio-right" aria-hidden="true">9</span>
+    </div>
+  </section>
+
+  <!-- 10–13 · Items -->
+  <section id="items" class="spread" aria-labelledby="items-title">
+    <div class="band band-ink"><h2 id="items-title">Items</h2></div>
+    <div class="pages items-pages">
+      <div class="pg pg-left item-list">
+        <div class="finder">
+          <label for="find">Find an item</label>
+          <input id="find" type="search" placeholder="sword, arrow, save…" autocomplete="off" spellcheck="false" data-find>
+        </div>
+        <p class="find-empty" data-find-empty hidden>No item by that name. The set has 100 items: try <button type="button" class="link-btn" data-find-try="heart">heart</button>, <button type="button" class="link-btn" data-find-try="arrow">arrow</button> or <button type="button" class="link-btn" data-find-try="save">save</button>.</p>
+        <div data-groups></div>
+        <span class="folio folio-left" aria-hidden="true">10</span>
+      </div>
+      <aside class="pg pg-right inspector" aria-labelledby="card-title" data-card>
+        <h3 id="card-title" class="card-title" data-card-title>Sword</h3>
+        <p class="card-name"><code data-card-comp>SuperMarioSword</code></p>
+        <div class="card-views">
+          <div class="card-paper" data-card-paper>
+            <span class="card-big" data-card-icon></span>
+            <svg class="card-grid" data-card-grid aria-hidden="true"></svg>
+          </div>
+          <div class="screen card-dark" data-card-dark></div>
+        </div>
+        <label class="toggle"><input type="checkbox" data-grid-toggle> Show the construction grid</label>
+        <pre class="code"><code data-code="card"></code></pre>
+        <div class="card-actions">
+          <button class="btn btn-primary" data-copy-code="card"><span class="ui-icon" data-icon="copy"></span><span data-label>Copy code</span></button>
+          <button class="btn" data-copy-svg><span class="ui-icon" data-icon="file"></span><span data-label>Copy SVG</span></button>
+          <a class="btn" data-download><span class="ui-icon" data-icon="download"></span><span data-label>Download .svg</span></a>
+        </div>
+        <h4 class="card-sub">This item in every world</h4>
+        <div class="every" data-every></div>
+      </aside>
+      <span class="folio folio-right folio-spread" aria-hidden="true">13</span>
+    </div>
+  </section>
+
+  <!-- 14–15 · Warning, warranty -->
+  <section id="warning" class="spread" aria-labelledby="warning-title">
+    <div class="band band-ink"><h2 id="warning-title">Warning</h2></div>
+    <div class="pages">
+      <div class="pg pg-left">
+        <div class="warn">
+          <h3>Please read before playing</h3>
+          <p>These icons are original artwork. Each style borrows a game's general visual language (line, colour, effects) and contains no logos, characters, fonts or assets from any game.</p>
+          <p>Game names are trademarks of their owners and are used here only to describe a style. This project is not affiliated with or endorsed by any game, studio or publisher.</p>
+        </div>
+        <h3 class="sub">Precautions</h3>
+        <ul class="precautions">
+          <li>Not on npm yet. Install from GitHub, or load the web component from the CDN.</li>
+          <li><code>portal</code> and <code>mirrors-edge</code> draw in your text colour. Every other world keeps its own palette, with a thin dark rim so it reads on light pages too.</li>
+          <li>Pixel worlds draw on their own grid (16, 13 or 12 cells) and stay sharp at any size.</li>
+          <li>A few worlds change colour from item to item, like Tetris pieces or Splatoon ink.</li>
+        </ul>
+        <span class="folio folio-left" aria-hidden="true">14</span>
+      </div>
+      <div class="pg pg-right">
+        <h3 class="sub" id="warranty">Warranty</h3>
+        <p>MIT licence: use the icons in personal and commercial projects, change them, ship them. The software is provided as is, without warranty of any kind.</p>
+        <h3 class="sub">Make your own world</h3>
+        <p>Everything is generated by one Python script from one set of glyphs. Add an item to <code>glyphs.py</code>, or a style function to <code>gen.py</code>, run <code>python3 gen.py</code>, and every output is rebuilt: components, strings, the web component, the SVG files and this page's data.</p>
+        <ul class="links">
+          <li><a href="https://github.com/horlesq/game-style-icons"><span class="ui-icon" data-icon="external-link"></span>Source on GitHub</a></li>
+          <li><a href="https://github.com/horlesq/game-style-icons#readme"><span class="ui-icon" data-icon="file"></span>README</a></li>
+          <li><a href="preview.html"><span class="ui-icon" data-icon="image"></span>All 5,000 icons on one page</a></li>
+          <li><a href="icons.json"><span class="ui-icon" data-icon="folder"></span>icons.json</a></li>
+        </ul>
+        <span class="folio folio-right" aria-hidden="true">15</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="back">
+  <p>Game Style Icons <span data-version>v0.4.0</span> · MIT · Made by Adrian Horlescu</p>
+</footer>
+<div class="visually-hidden" aria-live="polite" data-announce></div>
+</body>
+</html>

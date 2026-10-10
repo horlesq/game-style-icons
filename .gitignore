@@ -2,3 +2,7 @@ shots/
 __pycache__/
 node_modules/
 *.tgz
+.impeccable/surfaces/
+.impeccable/review/
+.impeccable/build/
+.impeccable/mocks/

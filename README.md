@@ -2,6 +2,8 @@
 
 100 icons in 50 styles inspired by video games: 5,000 SVG icons for any stack. Use them as React components, as a `<game-icon>` web component (plain HTML, Vue, Svelte, Angular, Astro...), as SVG strings, or as plain `.svg` files. No backgrounds, no fonts, no runtime dependencies.
 
+**Try every world in the browser: [icons.horly.dev](https://icons.horly.dev)**
+
 ![Six icons from each of the 50 styles](docs/overview.webp)
 
 ## Install

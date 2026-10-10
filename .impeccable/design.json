@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T20:30:00Z",
+  "title": "Design System: Game Style Icons",
+  "extensions": {
+    "colorMeta": {
+      "spot-ink": {
+        "role": "primary",
+        "displayName": "Spot Ink (Super Mario red, per-world variable)",
+        "canonical": "#e02420",
+        "tonalRamp": [
+          "#430b09",
+          "#701210",
+          "#9d1916",
+          "#c9201c",
+          "#e4423e",
+          "#ec7b79",
+          "#f4b4b3",
+          "#fce9e9"
+        ]
+      },
+      "on-ink": {
+        "role": "primary",
+        "displayName": "On-Ink",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#262626",
+          "#404040",
+          "#595959",
+          "#737373",
+          "#919191",
+          "#b2b2b2",
+          "#d4d4d4",
+          "#f2f2f2"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Coated Paper",
+        "canonical": "#fdfdfb",
+        "tonalRamp": [
+          "#333319",
+          "#55552a",
+          "#77773b",
+          "#99994c",
+          "#b6b66d",
+          "#cccc99",
+          "#e2e2c5",
+          "#f6f6ee"
+        ]
+      },
+      "press-black": {
+        "role": "neutral",
+        "displayName": "Press Black",
+        "canonical": "#121212",
+        "tonalRamp": [
+          "#262626",
+          "#404040",
+          "#595959",
+          "#737373",
+          "#919191",
+          "#b2b2b2",
+          "#d4d4d4",
+          "#f2f2f2"
+        ]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#4a4a46",
+        "tonalRamp": [
+          "#272725",
+          "#42423e",
+          "#5c5c57",
+          "#767670",
+          "#94948e",
+          "#b5b5b0",
+          "#d5d5d2",
+          "#f3f3f2"
+        ]
+      },
+      "screen": {
+        "role": "neutral",
+        "displayName": "Screen",
+        "canonical": "#111216",
+        "tonalRamp": [
+          "#21232b",
+          "#383b48",
+          "#4e5265",
+          "#646a81",
+          "#83899f",
+          "#a9adbc",
+          "#ced0d9",
+          "#f1f1f4"
+        ]
+      },
+      "screen-text": {
+        "role": "neutral",
+        "displayName": "Screen Text",
+        "canonical": "#e9ebee",
+        "tonalRamp": [
+          "#21252b",
+          "#383e48",
+          "#4e5765",
+          "#647081",
+          "#838f9f",
+          "#a9b1bc",
+          "#ced3d9",
+          "#f1f2f4"
+        ]
+      },
+      "screen-muted": {
+        "role": "neutral",
+        "displayName": "Screen Muted",
+        "canonical": "#9aa0a8",
+        "tonalRamp": [
+          "#232629",
+          "#3b3f44",
+          "#535860",
+          "#6a727b",
+          "#89909a",
+          "#adb2b8",
+          "#d0d3d7",
+          "#f1f2f3"
+        ]
+      },
+      "hairline-rule": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "rgba(18, 18, 18, .16)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Cover title only; expanded black caps."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Chapter band titles."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "The cover's one-line promise."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Step titles and sub-heads; in-page section heads step up to width 125, 900, uppercase."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text, 52-72ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, tabs, table heads, page-tab names."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Page-tab numbers, folios, step counters, world levels; tabular."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Copyable code and identifiers only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "box-lift",
+        "value": "0 18px 40px -16px rgba(0, 0, 0, .45)",
+        "purpose": "Only under the cover item box."
+      },
+      {
+        "name": "screen-bezel",
+        "value": "inset 0 0 0 3px #000, inset 0 0 48px rgba(255, 255, 255, .04)",
+        "purpose": "Inside every dark Fig. screen."
+      },
+      {
+        "name": "ink-ring",
+        "value": "0 0 0 3px var(--paper), 0 0 0 5px var(--ink)",
+        "purpose": "Paper gap and spot-ink ring around numbered step blocks."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "All state transitions and the re-ink wipe."
+      },
+      {
+        "name": "reink-wipe",
+        "value": "clip-path inset(0 100% 0 0) to inset(0), .6s ease",
+        "purpose": "New spot ink wipes left to right across every band when a world is chosen; instant under reduced motion."
+      },
+      {
+        "name": "cover-step",
+        "value": "1400ms interval",
+        "purpose": "Cover item box steps through worlds; paused under reduced motion and by the Pause control."
+      },
+      {
+        "name": "state",
+        "value": ".2s background/color; .25s transform",
+        "purpose": "Buttons, tabs, tiles."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "single-column-grids",
+        "value": "1080px"
+      },
+      {
+        "name": "stacked-pages-bottom-tabs",
+        "value": "860px"
+      },
+      {
+        "name": "narrow",
+        "value": "520px"
+      },
+      {
+        "name": "short-viewport-tabs",
+        "value": "max-height 700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Outlined pill; inverts to black on hover.",
+      "html": "<button class=\"ds-btn\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"8\" y=\"8\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3\"/></svg>Copy SVG</button>",
+      "css": ":host{--paper:#fdfdfb;--black:#121212;--muted:#4a4a46;--rule:rgba(18,18,18,.16);--screen:#111216;--screen-text:#e9ebee;--screen-muted:#9aa0a8;--ink:#e02420;--on-ink:#ffffff;--f-text:'Archivo',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)} .ds-btn{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 18px;font:700 1rem/1 var(--f-text);color:var(--black);background:var(--paper);border:2px solid var(--black);border-radius:999px;cursor:pointer;transition:background .2s,color .2s,transform .2s var(--ease)} .ds-btn:hover{background:var(--black);color:var(--paper)} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:3px solid var(--black);outline-offset:3px}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Black pill for the one copy action per panel; inverts to paper on hover.",
+      "html": "<button class=\"ds-btn-primary\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"8\" y=\"8\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3\"/></svg>Copy code</button>",
+      "css": ":host{--paper:#fdfdfb;--black:#121212;--muted:#4a4a46;--rule:rgba(18,18,18,.16);--screen:#111216;--screen-text:#e9ebee;--screen-muted:#9aa0a8;--ink:#e02420;--on-ink:#ffffff;--f-text:'Archivo',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)} .ds-btn-primary{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 18px;font:700 1rem/1 var(--f-text);color:var(--paper);background:var(--black);border:2px solid var(--black);border-radius:999px;cursor:pointer;transition:background .2s,color .2s,transform .2s var(--ease)} .ds-btn-primary:hover{background:var(--paper);color:var(--black)} .ds-btn-primary:active{transform:translateY(1px)} .ds-btn-primary:focus-visible{outline:3px solid var(--black);outline-offset:3px}"
+    },
+    {
+      "name": "Find Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Search field with a stroked label; spot-ink focus outline.",
+      "html": "<label class=\"ds-find\"><span>Find an item</span><input type=\"search\" placeholder=\"sword, arrow, save…\"></label>",
+      "css": ":host{--paper:#fdfdfb;--black:#121212;--muted:#4a4a46;--rule:rgba(18,18,18,.16);--screen:#111216;--screen-text:#e9ebee;--screen-muted:#9aa0a8;--ink:#e02420;--on-ink:#ffffff;--f-text:'Archivo',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)} .ds-find{display:grid;gap:8px;max-width:480px;font-family:var(--f-text)} .ds-find span{font-weight:800;font-stretch:112%} .ds-find input{font:500 1.05rem var(--f-text);min-height:50px;padding:0 16px;color:var(--black);background:#fff;border:2px solid var(--black);border-radius:12px} .ds-find input:focus-visible{outline:3px solid var(--ink);outline-offset:2px}"
+    },
+    {
+      "name": "Page Tabs",
+      "kind": "nav",
+      "refersTo": "page-tab",
+      "description": "The only navigation: numbered die-cut tabs on the right edge; current page in spot ink.",
+      "html": "<nav class=\"ds-tabs\"><a href=\"#\" aria-current=\"true\"><b>1</b><span>Cover</span></a><a href=\"#\"><b>2</b><span>Start</span></a><a href=\"#\"><b>4</b><span>Controls</span></a></nav>",
+      "css": ":host{--paper:#fdfdfb;--black:#121212;--muted:#4a4a46;--rule:rgba(18,18,18,.16);--screen:#111216;--screen-text:#e9ebee;--screen-muted:#9aa0a8;--ink:#e02420;--on-ink:#ffffff;--f-text:'Archivo',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)} .ds-tabs{display:flex;flex-direction:column;gap:6px;align-items:flex-end;font-family:var(--f-text)} .ds-tabs a{display:flex;flex-direction:column;align-items:center;gap:8px;width:58px;padding:12px 0 14px;text-decoration:none;background:var(--paper);color:var(--black);border:2px solid var(--black);border-right:0;border-radius:10px 0 0 10px;transition:background .2s,color .2s,transform .25s var(--ease)} .ds-tabs b{font-weight:900;font-stretch:125%;font-variant-numeric:tabular-nums} .ds-tabs span{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:700;font-size:.82rem;letter-spacing:.02em;text-transform:uppercase} .ds-tabs a:hover{transform:translateX(-4px)} .ds-tabs a[aria-current='true']{background:var(--ink);color:var(--on-ink)} .ds-tabs a:focus-visible{outline:3px solid var(--black);outline-offset:3px}"
+    },
+    {
+      "name": "Level Tag",
+      "kind": "chip",
+      "refersTo": "",
+      "description": "World-level number set on on-ink ground beside a world name.",
+      "html": "<div class=\"ds-chipwrap\"><span class=\"ds-name\">Super Mario <span class=\"ds-level\">2-7</span></span></div>",
+      "css": ":host{--paper:#fdfdfb;--black:#121212;--muted:#4a4a46;--rule:rgba(18,18,18,.16);--screen:#111216;--screen-text:#e9ebee;--screen-muted:#9aa0a8;--ink:#e02420;--on-ink:#ffffff;--f-text:'Archivo',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)} .ds-chipwrap{background:var(--ink);color:var(--on-ink);padding:16px;font-family:var(--f-text)} .ds-name{font-weight:800;font-size:1.5rem} .ds-level{display:inline-block;padding:2px 7px;border-radius:5px;background:var(--on-ink);color:var(--ink);font-weight:900;font-stretch:125%;font-size:.7em;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Selection Tile",
+      "kind": "card",
+      "refersTo": "tile",
+      "description": "Item tile: black border on hover, spot-ink fill when selected.",
+      "html": "<div class=\"ds-tiles\"><button class=\"ds-tile\"><svg viewBox=\"0 0 24 24\" width=\"40\" height=\"40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z\"/></svg>heart</button><button class=\"ds-tile\" aria-pressed=\"true\"><svg viewBox=\"0 0 24 24\" width=\"40\" height=\"40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M14 4l6 6-9 9H5v-6z\"/></svg>sword</button></div>",
+      "css": ":host{--paper:#fdfdfb;--black:#121212;--muted:#4a4a46;--rule:rgba(18,18,18,.16);--screen:#111216;--screen-text:#e9ebee;--screen-muted:#9aa0a8;--ink:#e02420;--on-ink:#ffffff;--f-text:'Archivo',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)} .ds-tiles{display:flex;gap:6px} .ds-tile{display:grid;justify-items:center;gap:8px;width:96px;min-height:96px;padding:14px 6px 10px;cursor:pointer;background:transparent;color:var(--black);font:600 .82rem/1.2 var(--f-text);border:2px solid transparent;border-radius:12px} .ds-tile:hover{border-color:var(--black)} .ds-tile[aria-pressed='true']{background:var(--ink);color:var(--on-ink);border-color:var(--black)} .ds-tile:focus-visible{outline:3px solid var(--black);outline-offset:3px}"
+    },
+    {
+      "name": "Chapter Band",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Spot-ink chapter band with expanded black caps and a halftone screen fading in from the left.",
+      "html": "<div class=\"ds-band\"><h2>Controls</h2></div>",
+      "css": ":host{--paper:#fdfdfb;--black:#121212;--muted:#4a4a46;--rule:rgba(18,18,18,.16);--screen:#111216;--screen-text:#e9ebee;--screen-muted:#9aa0a8;--ink:#e02420;--on-ink:#ffffff;--f-text:'Archivo',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)} .ds-band{position:relative;isolation:isolate;background:var(--ink);color:var(--on-ink);padding:24px 32px;font-family:var(--f-text)} .ds-band::before{content:'';position:absolute;inset:0;z-index:-1;background-image:radial-gradient(circle,rgba(0,0,0,.2) 0 1.15px,transparent 1.45px);background-size:7px 7px;-webkit-mask-image:linear-gradient(100deg,transparent 38%,#000 92%);mask-image:linear-gradient(100deg,transparent 38%,#000 92%)} .ds-band h2{margin:0;font-weight:900;font-stretch:125%;text-transform:uppercase;font-size:3rem;line-height:1}"
+    },
+    {
+      "name": "Fig. Screen",
+      "kind": "custom",
+      "refersTo": "screen-frame",
+      "description": "Dark bezelled screen for icons on dark, always captioned Fig. n.",
+      "html": "<figure class=\"ds-fig\"><div class=\"ds-screen\"><svg viewBox=\"0 0 24 24\" width=\"48\" height=\"48\" fill=\"none\" stroke=\"#1fd65f\" stroke-width=\"2\"><path d=\"M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z\"/></svg></div><figcaption><b>Fig. 1</b> Heart in Fallout</figcaption></figure>",
+      "css": ":host{--paper:#fdfdfb;--black:#121212;--muted:#4a4a46;--rule:rgba(18,18,18,.16);--screen:#111216;--screen-text:#e9ebee;--screen-muted:#9aa0a8;--ink:#e02420;--on-ink:#ffffff;--f-text:'Archivo',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)} .ds-fig{margin:0;display:grid;gap:12px;font-family:var(--f-text)} .ds-screen{display:flex;align-items:center;justify-content:center;min-height:150px;padding:24px;background:var(--screen);color:var(--screen-text);border-radius:14px;box-shadow:inset 0 0 0 3px #000,inset 0 0 48px rgba(255,255,255,.04)} .ds-fig figcaption{font-size:.95rem;color:var(--muted)} .ds-fig b{color:var(--black);font-stretch:125%}"
+    },
+    {
+      "name": "Code Plate",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "Black code plate; keywords in the spot ink.",
+      "html": "<pre class=\"ds-code\"><code><span class=\"k\">import</span> { SuperMarioSword } <span class=\"k\">from</span> <span class=\"s\">'game-style-icons/super-mario'</span></code></pre>",
+      "css": ":host{--paper:#fdfdfb;--black:#121212;--muted:#4a4a46;--rule:rgba(18,18,18,.16);--screen:#111216;--screen-text:#e9ebee;--screen-muted:#9aa0a8;--ink:#e02420;--on-ink:#ffffff;--f-text:'Archivo',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1)} .ds-code{margin:0;padding:16px 18px;background:var(--black);color:#f3f3ef;border-radius:10px;font:400 .88rem/1.6 var(--f-mono);white-space:pre-wrap} .ds-code .k{color:#ff9b8f} .ds-code .s{color:#b9e88a}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cartridge Manual",
+    "overview": "The page is printed like the instruction booklet that came in a 90s game box: bright white coated paper, black ink, and one spot ink per edition. The spot ink is not a brand colour; it belongs to whichever world (style) the reader has chosen, Super Mario red by default, and every inked surface shares it. Pick a different world and the whole booklet is reprinted in that world's ink with a single wipe.\n\nStructure comes from print furniture rather than web chrome: chapter bands in spot ink with a halftone dot screen, two-page spreads with a soft gutter shadow down the middle, numbered page tabs on the edge, folios in the page corners, and dark captioned \"Fig.\" screens wherever icons sit on dark. Type is Archivo pushed to its widest axis in black caps for titles, plain Archivo for reading, and JetBrains Mono only for code. The icons themselves supply all illustration; even the interface glyphs (copy, star, flag, download) are drawn from the package, in the current world.\n\nDensity is a manual's: generous page padding, short measure, clear numbered steps, tables with hairline rules. Ornament is limited to what a printer would have: dot screens, double rules, rivet dots, numbered blocks.",
+    "keyCharacteristics": [
+      "One variable spot ink (`--ink` / `--on-ink`) drives every coloured surface; everything else is paper and black.",
+      "Archivo at width 125, weight 900, uppercase for every title; tabular numerals for every number that counts pages or levels.",
+      "Dark \"screens\" are the only dark surfaces besides black type plates, and they always carry icons.",
+      "Thick black strokes (2px for controls, 3-4px for frames) define shape; shadow is rare.",
+      "Motion is two things only: the cover item stepping through worlds and the re-ink wipe."
+    ],
+    "rules": [
+      {
+        "name": "The One Spot Ink Rule",
+        "body": "A spread prints in paper, black and exactly one spot ink, the current world's. No second accent, no gradients between inks. A selected state is shown by filling with the spot ink and keeping a black border.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Is a Variable Rule",
+        "body": "Spot ink and its text colour always travel together as a pair from the world data; a surface that takes `--ink` as background takes `--on-ink` as text, never a fixed white.",
+        "section": "colors"
+      },
+      {
+        "name": "The Expanded Caps Rule",
+        "body": "Every title that names a page, chapter or section is Archivo at width 125, weight 900, uppercase. Body copy never uses the expanded width.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Means Copyable Rule",
+        "body": "JetBrains Mono is used only for code and identifiers the reader can paste. Never for labels, captions or decoration.",
+        "section": "typography"
+      },
+      {
+        "name": "The Printed, Not Lit Rule",
+        "body": "Surfaces do not float. Use a black border, a spot-ink fill or a dark screen to separate things; the box lift is reserved for the cover item box.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do take every coloured fill from the spot ink pair (`--ink` with `--on-ink`) so a world change reprints it.",
+      "Do set page, chapter and section titles in Archivo width 125, weight 900, uppercase, and every counting number in tabular numerals.",
+      "Do show icons on both paper and a dark screen, and caption dark screens with \"Fig. n\".",
+      "Do draw interface glyphs from the package itself, in the current world.",
+      "Do separate surfaces with 2px black strokes, hairline rules and spot-ink fills before reaching for shadow.",
+      "Do keep motion to the cover stepper and the re-ink wipe, and hold both still under reduced motion."
+    ],
+    "donts": [
+      "Don't introduce a second accent colour or a fixed brand colour beside the spot ink.",
+      "Don't use JetBrains Mono for anything that is not code or a copyable identifier.",
+      "Don't add drop shadows to cards, buttons or tiles; the box lift belongs to the cover item box alone.",
+      "Don't use game logos, characters, official artwork or game fonts anywhere on the page.",
+      "Don't add navigation beyond the page tabs."
+    ]
+  }
+}
