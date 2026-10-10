@@ -6,3 +6,4 @@ node_modules/
 .impeccable/review/
 .impeccable/build/
 .impeccable/mocks/
+.impeccable/questions/
