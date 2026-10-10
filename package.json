@@ -1,7 +1,7 @@
 {
   "name": "game-style-icons",
-  "version": "0.2.0",
-  "description": "2,000 SVG icons as React components: 100 UI and game icons in 20 styles inspired by video games (Cyberpunk, Borderlands, GTA, Minecraft, Fallout...).",
+  "version": "0.3.0",
+  "description": "5,000 SVG icons as React components: 100 UI and game icons in 50 styles inspired by video games (Cyberpunk, Minecraft, Zelda, Super Mario, Elden Ring...).",
   "type": "module",
   "sideEffects": false,
   "main": "./src/index.js",
@@ -113,6 +113,156 @@
       "import": "./src/overwatch.js",
       "default": "./src/overwatch.js"
     },
+    "./super-mario": {
+      "types": "./src/super-mario.d.ts",
+      "import": "./src/super-mario.js",
+      "default": "./src/super-mario.js"
+    },
+    "./sonic": {
+      "types": "./src/sonic.d.ts",
+      "import": "./src/sonic.js",
+      "default": "./src/sonic.js"
+    },
+    "./pokemon": {
+      "types": "./src/pokemon.d.ts",
+      "import": "./src/pokemon.js",
+      "default": "./src/pokemon.js"
+    },
+    "./tetris": {
+      "types": "./src/tetris.d.ts",
+      "import": "./src/tetris.js",
+      "default": "./src/tetris.js"
+    },
+    "./space-invaders": {
+      "types": "./src/space-invaders.d.ts",
+      "import": "./src/space-invaders.js",
+      "default": "./src/space-invaders.js"
+    },
+    "./undertale": {
+      "types": "./src/undertale.d.ts",
+      "import": "./src/undertale.js",
+      "default": "./src/undertale.js"
+    },
+    "./asteroids": {
+      "types": "./src/asteroids.d.ts",
+      "import": "./src/asteroids.js",
+      "default": "./src/asteroids.js"
+    },
+    "./kirby": {
+      "types": "./src/kirby.d.ts",
+      "import": "./src/kirby.js",
+      "default": "./src/kirby.js"
+    },
+    "./final-fantasy": {
+      "types": "./src/final-fantasy.d.ts",
+      "import": "./src/final-fantasy.js",
+      "default": "./src/final-fantasy.js"
+    },
+    "./among-us": {
+      "types": "./src/among-us.d.ts",
+      "import": "./src/among-us.js",
+      "default": "./src/among-us.js"
+    },
+    "./okami": {
+      "types": "./src/okami.d.ts",
+      "import": "./src/okami.js",
+      "default": "./src/okami.js"
+    },
+    "./cuphead": {
+      "types": "./src/cuphead.d.ts",
+      "import": "./src/cuphead.js",
+      "default": "./src/cuphead.js"
+    },
+    "./limbo": {
+      "types": "./src/limbo.d.ts",
+      "import": "./src/limbo.js",
+      "default": "./src/limbo.js"
+    },
+    "./monument-valley": {
+      "types": "./src/monument-valley.d.ts",
+      "import": "./src/monument-valley.js",
+      "default": "./src/monument-valley.js"
+    },
+    "./obra-dinn": {
+      "types": "./src/obra-dinn.d.ts",
+      "import": "./src/obra-dinn.js",
+      "default": "./src/obra-dinn.js"
+    },
+    "./firewatch": {
+      "types": "./src/firewatch.d.ts",
+      "import": "./src/firewatch.js",
+      "default": "./src/firewatch.js"
+    },
+    "./nier-automata": {
+      "types": "./src/nier-automata.d.ts",
+      "import": "./src/nier-automata.js",
+      "default": "./src/nier-automata.js"
+    },
+    "./superhot": {
+      "types": "./src/superhot.d.ts",
+      "import": "./src/superhot.js",
+      "default": "./src/superhot.js"
+    },
+    "./littlebigplanet": {
+      "types": "./src/littlebigplanet.d.ts",
+      "import": "./src/littlebigplanet.js",
+      "default": "./src/littlebigplanet.js"
+    },
+    "./bioshock": {
+      "types": "./src/bioshock.d.ts",
+      "import": "./src/bioshock.js",
+      "default": "./src/bioshock.js"
+    },
+    "./the-witcher": {
+      "types": "./src/the-witcher.d.ts",
+      "import": "./src/the-witcher.js",
+      "default": "./src/the-witcher.js"
+    },
+    "./elden-ring": {
+      "types": "./src/elden-ring.d.ts",
+      "import": "./src/elden-ring.js",
+      "default": "./src/elden-ring.js"
+    },
+    "./red-dead-redemption": {
+      "types": "./src/red-dead-redemption.d.ts",
+      "import": "./src/red-dead-redemption.js",
+      "default": "./src/red-dead-redemption.js"
+    },
+    "./assassins-creed": {
+      "types": "./src/assassins-creed.d.ts",
+      "import": "./src/assassins-creed.js",
+      "default": "./src/assassins-creed.js"
+    },
+    "./disco-elysium": {
+      "types": "./src/disco-elysium.d.ts",
+      "import": "./src/disco-elysium.js",
+      "default": "./src/disco-elysium.js"
+    },
+    "./fortnite": {
+      "types": "./src/fortnite.d.ts",
+      "import": "./src/fortnite.js",
+      "default": "./src/fortnite.js"
+    },
+    "./half-life": {
+      "types": "./src/half-life.d.ts",
+      "import": "./src/half-life.js",
+      "default": "./src/half-life.js"
+    },
+    "./dead-space": {
+      "types": "./src/dead-space.d.ts",
+      "import": "./src/dead-space.js",
+      "default": "./src/dead-space.js"
+    },
+    "./god-of-war": {
+      "types": "./src/god-of-war.d.ts",
+      "import": "./src/god-of-war.js",
+      "default": "./src/god-of-war.js"
+    },
+    "./katamari": {
+      "types": "./src/katamari.d.ts",
+      "import": "./src/katamari.js",
+      "default": "./src/katamari.js"
+    },
     "./svg/*": "./svg/*",
     "./icons.json": "./icons.json"
   },
@@ -125,24 +275,33 @@
     "react": ">=18"
   },
   "keywords": [
+    "8-bit",
     "arcade",
     "cyberpunk",
     "game",
     "gaming",
     "hud",
+    "icon-pack",
     "icons",
     "minecraft",
     "neon",
     "pixel",
+    "pixel-art",
     "react",
+    "react-component",
     "react-icons",
     "retro",
     "rpg",
-    "svg"
+    "svg",
+    "typescript"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/horlesq/game-style-icons.git"
+  },
+  "homepage": "https://github.com/horlesq/game-style-icons#readme",
+  "bugs": {
+    "url": "https://github.com/horlesq/game-style-icons/issues"
   }
 }
