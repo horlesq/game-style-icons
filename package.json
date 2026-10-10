@@ -1,9 +1,11 @@
 {
   "name": "game-style-icons",
-  "version": "0.3.0",
-  "description": "5,000 SVG icons as React components: 100 UI and game icons in 50 styles inspired by video games (Cyberpunk, Minecraft, Zelda, Super Mario, Elden Ring...).",
+  "version": "0.4.0",
+  "description": "100 UI and game icons in 50 styles inspired by video games (5,000 SVG icons): React components, a <game-icon> web component for any framework, SVG strings and plain SVG files.",
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": [
+    "./src/element.js"
+  ],
   "main": "./src/index.js",
   "module": "./src/index.js",
   "types": "./src/index.d.ts",
@@ -263,6 +265,266 @@
       "import": "./src/katamari.js",
       "default": "./src/katamari.js"
     },
+    "./html": {
+      "types": "./src/html/index.d.ts",
+      "import": "./src/html/index.js",
+      "default": "./src/html/index.js"
+    },
+    "./html/cyberpunk": {
+      "types": "./src/html/cyberpunk.d.ts",
+      "import": "./src/html/cyberpunk.js",
+      "default": "./src/html/cyberpunk.js"
+    },
+    "./html/borderlands": {
+      "types": "./src/html/borderlands.d.ts",
+      "import": "./src/html/borderlands.js",
+      "default": "./src/html/borderlands.js"
+    },
+    "./html/gta": {
+      "types": "./src/html/gta.d.ts",
+      "import": "./src/html/gta.js",
+      "default": "./src/html/gta.js"
+    },
+    "./html/minecraft": {
+      "types": "./src/html/minecraft.d.ts",
+      "import": "./src/html/minecraft.js",
+      "default": "./src/html/minecraft.js"
+    },
+    "./html/fallout": {
+      "types": "./src/html/fallout.d.ts",
+      "import": "./src/html/fallout.js",
+      "default": "./src/html/fallout.js"
+    },
+    "./html/zelda": {
+      "types": "./src/html/zelda.d.ts",
+      "import": "./src/html/zelda.js",
+      "default": "./src/html/zelda.js"
+    },
+    "./html/halo": {
+      "types": "./src/html/halo.d.ts",
+      "import": "./src/html/halo.js",
+      "default": "./src/html/halo.js"
+    },
+    "./html/persona": {
+      "types": "./src/html/persona.d.ts",
+      "import": "./src/html/persona.js",
+      "default": "./src/html/persona.js"
+    },
+    "./html/hollow-knight": {
+      "types": "./src/html/hollow-knight.d.ts",
+      "import": "./src/html/hollow-knight.js",
+      "default": "./src/html/hollow-knight.js"
+    },
+    "./html/hades": {
+      "types": "./src/html/hades.d.ts",
+      "import": "./src/html/hades.js",
+      "default": "./src/html/hades.js"
+    },
+    "./html/portal": {
+      "types": "./src/html/portal.d.ts",
+      "import": "./src/html/portal.js",
+      "default": "./src/html/portal.js"
+    },
+    "./html/mass-effect": {
+      "types": "./src/html/mass-effect.d.ts",
+      "import": "./src/html/mass-effect.js",
+      "default": "./src/html/mass-effect.js"
+    },
+    "./html/doom": {
+      "types": "./src/html/doom.d.ts",
+      "import": "./src/html/doom.js",
+      "default": "./src/html/doom.js"
+    },
+    "./html/splatoon": {
+      "types": "./src/html/splatoon.d.ts",
+      "import": "./src/html/splatoon.js",
+      "default": "./src/html/splatoon.js"
+    },
+    "./html/animal-crossing": {
+      "types": "./src/html/animal-crossing.d.ts",
+      "import": "./src/html/animal-crossing.js",
+      "default": "./src/html/animal-crossing.js"
+    },
+    "./html/hotline-miami": {
+      "types": "./src/html/hotline-miami.d.ts",
+      "import": "./src/html/hotline-miami.js",
+      "default": "./src/html/hotline-miami.js"
+    },
+    "./html/mirrors-edge": {
+      "types": "./src/html/mirrors-edge.d.ts",
+      "import": "./src/html/mirrors-edge.js",
+      "default": "./src/html/mirrors-edge.js"
+    },
+    "./html/diablo": {
+      "types": "./src/html/diablo.d.ts",
+      "import": "./src/html/diablo.js",
+      "default": "./src/html/diablo.js"
+    },
+    "./html/pac-man": {
+      "types": "./src/html/pac-man.d.ts",
+      "import": "./src/html/pac-man.js",
+      "default": "./src/html/pac-man.js"
+    },
+    "./html/overwatch": {
+      "types": "./src/html/overwatch.d.ts",
+      "import": "./src/html/overwatch.js",
+      "default": "./src/html/overwatch.js"
+    },
+    "./html/super-mario": {
+      "types": "./src/html/super-mario.d.ts",
+      "import": "./src/html/super-mario.js",
+      "default": "./src/html/super-mario.js"
+    },
+    "./html/sonic": {
+      "types": "./src/html/sonic.d.ts",
+      "import": "./src/html/sonic.js",
+      "default": "./src/html/sonic.js"
+    },
+    "./html/pokemon": {
+      "types": "./src/html/pokemon.d.ts",
+      "import": "./src/html/pokemon.js",
+      "default": "./src/html/pokemon.js"
+    },
+    "./html/tetris": {
+      "types": "./src/html/tetris.d.ts",
+      "import": "./src/html/tetris.js",
+      "default": "./src/html/tetris.js"
+    },
+    "./html/space-invaders": {
+      "types": "./src/html/space-invaders.d.ts",
+      "import": "./src/html/space-invaders.js",
+      "default": "./src/html/space-invaders.js"
+    },
+    "./html/undertale": {
+      "types": "./src/html/undertale.d.ts",
+      "import": "./src/html/undertale.js",
+      "default": "./src/html/undertale.js"
+    },
+    "./html/asteroids": {
+      "types": "./src/html/asteroids.d.ts",
+      "import": "./src/html/asteroids.js",
+      "default": "./src/html/asteroids.js"
+    },
+    "./html/kirby": {
+      "types": "./src/html/kirby.d.ts",
+      "import": "./src/html/kirby.js",
+      "default": "./src/html/kirby.js"
+    },
+    "./html/final-fantasy": {
+      "types": "./src/html/final-fantasy.d.ts",
+      "import": "./src/html/final-fantasy.js",
+      "default": "./src/html/final-fantasy.js"
+    },
+    "./html/among-us": {
+      "types": "./src/html/among-us.d.ts",
+      "import": "./src/html/among-us.js",
+      "default": "./src/html/among-us.js"
+    },
+    "./html/okami": {
+      "types": "./src/html/okami.d.ts",
+      "import": "./src/html/okami.js",
+      "default": "./src/html/okami.js"
+    },
+    "./html/cuphead": {
+      "types": "./src/html/cuphead.d.ts",
+      "import": "./src/html/cuphead.js",
+      "default": "./src/html/cuphead.js"
+    },
+    "./html/limbo": {
+      "types": "./src/html/limbo.d.ts",
+      "import": "./src/html/limbo.js",
+      "default": "./src/html/limbo.js"
+    },
+    "./html/monument-valley": {
+      "types": "./src/html/monument-valley.d.ts",
+      "import": "./src/html/monument-valley.js",
+      "default": "./src/html/monument-valley.js"
+    },
+    "./html/obra-dinn": {
+      "types": "./src/html/obra-dinn.d.ts",
+      "import": "./src/html/obra-dinn.js",
+      "default": "./src/html/obra-dinn.js"
+    },
+    "./html/firewatch": {
+      "types": "./src/html/firewatch.d.ts",
+      "import": "./src/html/firewatch.js",
+      "default": "./src/html/firewatch.js"
+    },
+    "./html/nier-automata": {
+      "types": "./src/html/nier-automata.d.ts",
+      "import": "./src/html/nier-automata.js",
+      "default": "./src/html/nier-automata.js"
+    },
+    "./html/superhot": {
+      "types": "./src/html/superhot.d.ts",
+      "import": "./src/html/superhot.js",
+      "default": "./src/html/superhot.js"
+    },
+    "./html/littlebigplanet": {
+      "types": "./src/html/littlebigplanet.d.ts",
+      "import": "./src/html/littlebigplanet.js",
+      "default": "./src/html/littlebigplanet.js"
+    },
+    "./html/bioshock": {
+      "types": "./src/html/bioshock.d.ts",
+      "import": "./src/html/bioshock.js",
+      "default": "./src/html/bioshock.js"
+    },
+    "./html/the-witcher": {
+      "types": "./src/html/the-witcher.d.ts",
+      "import": "./src/html/the-witcher.js",
+      "default": "./src/html/the-witcher.js"
+    },
+    "./html/elden-ring": {
+      "types": "./src/html/elden-ring.d.ts",
+      "import": "./src/html/elden-ring.js",
+      "default": "./src/html/elden-ring.js"
+    },
+    "./html/red-dead-redemption": {
+      "types": "./src/html/red-dead-redemption.d.ts",
+      "import": "./src/html/red-dead-redemption.js",
+      "default": "./src/html/red-dead-redemption.js"
+    },
+    "./html/assassins-creed": {
+      "types": "./src/html/assassins-creed.d.ts",
+      "import": "./src/html/assassins-creed.js",
+      "default": "./src/html/assassins-creed.js"
+    },
+    "./html/disco-elysium": {
+      "types": "./src/html/disco-elysium.d.ts",
+      "import": "./src/html/disco-elysium.js",
+      "default": "./src/html/disco-elysium.js"
+    },
+    "./html/fortnite": {
+      "types": "./src/html/fortnite.d.ts",
+      "import": "./src/html/fortnite.js",
+      "default": "./src/html/fortnite.js"
+    },
+    "./html/half-life": {
+      "types": "./src/html/half-life.d.ts",
+      "import": "./src/html/half-life.js",
+      "default": "./src/html/half-life.js"
+    },
+    "./html/dead-space": {
+      "types": "./src/html/dead-space.d.ts",
+      "import": "./src/html/dead-space.js",
+      "default": "./src/html/dead-space.js"
+    },
+    "./html/god-of-war": {
+      "types": "./src/html/god-of-war.d.ts",
+      "import": "./src/html/god-of-war.js",
+      "default": "./src/html/god-of-war.js"
+    },
+    "./html/katamari": {
+      "types": "./src/html/katamari.d.ts",
+      "import": "./src/html/katamari.js",
+      "default": "./src/html/katamari.js"
+    },
+    "./element": {
+      "types": "./src/element.d.ts",
+      "import": "./src/element.js",
+      "default": "./src/element.js"
+    },
     "./svg/*": "./svg/*",
     "./icons.json": "./icons.json"
   },
@@ -276,7 +538,9 @@
   },
   "keywords": [
     "8-bit",
+    "angular",
     "arcade",
+    "custom-elements",
     "cyberpunk",
     "game",
     "gaming",
@@ -288,12 +552,14 @@
     "pixel",
     "pixel-art",
     "react",
-    "react-component",
-    "react-icons",
     "retro",
     "rpg",
+    "svelte",
     "svg",
-    "typescript"
+    "svg-icons",
+    "typescript",
+    "vue",
+    "web-components"
   ],
   "license": "MIT",
   "repository": {
@@ -303,5 +569,10 @@
   "homepage": "https://github.com/horlesq/game-style-icons#readme",
   "bugs": {
     "url": "https://github.com/horlesq/game-style-icons/issues"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
   }
 }

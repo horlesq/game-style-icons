@@ -1,6 +1,6 @@
 # Game Style Icons
 
-100 icons in 50 styles inspired by video games, as **React components** (like react-icons) and plain SVGs: 5,000 components. No backgrounds, no fonts, no dependencies besides React, tree-shakable.
+100 icons in 50 styles inspired by video games: 5,000 SVG icons for any stack. Use them as React components, as a `<game-icon>` web component (plain HTML, Vue, Svelte, Angular, Astro...), as SVG strings, or as plain `.svg` files. No backgrounds, no fonts, no runtime dependencies.
 
 ![Six icons from each of the 50 styles](docs/overview.webp)
 
@@ -10,19 +10,39 @@
 npm install github:horlesq/game-style-icons
 ```
 
-Not on npm yet. Needs React 18 or newer. Without React, copy the SVG files from `svg/`.
+Not on npm yet. React is optional: only the React components need it (18 or newer).
 
 ## Use
+
+Every icon has the same name everywhere: style prefix + icon name, e.g. `CyberpunkHeart`, `PacManSword`, `TetrisGem`. Only the import path changes.
+
+### Any framework or plain HTML: the web component
+
+```html
+<script type="module">import 'game-style-icons/element';</script>
+
+<game-icon set="cyberpunk" name="heart"></game-icon>               <!-- 1em: follows the font size -->
+<game-icon set="minecraft" name="sword" size="32"></game-icon>
+<game-icon set="elden-ring" name="potion" size="2rem" label="Potion"></game-icon>  <!-- label = accessible name -->
+```
+
+No build step? Load it from a CDN:
+
+```html
+<script type="module" src="https://cdn.jsdelivr.net/gh/horlesq/game-style-icons@v0.4.0/src/element.js"></script>
+```
+
+`set` is the style, `name` the icon (in kebab case: `map-pin`, `level-up`), `size` a number (px) or any CSS length, `label` the accessible name (without it the icon is `aria-hidden`). Changing an attribute re-renders. The element loads a style's icons the first time that style is used, and draws inside its own shadow root, so ids never clash. Style it like an image: `game-icon { width: 40px; height: 40px }` overrides `size`.
+
+### React
 
 ```jsx
 import { CyberpunkHeart, CyberpunkCoin } from 'game-style-icons/cyberpunk';
 import { MinecraftSword } from 'game-style-icons/minecraft';
-import { EldenRingPotion } from 'game-style-icons/elden-ring';
 
 <CyberpunkHeart />                           // 1em: follows the font size
 <CyberpunkCoin size={32} title="Coins" />      // accessible name; without a title the icon is aria-hidden
-<MinecraftSword className="icon" style={{ verticalAlign: 'middle' }} />
-<EldenRingPotion size="2rem" onClick={drink} />
+<MinecraftSword className="icon" style={{ verticalAlign: 'middle' }} onClick={swing} />
 ```
 
 | Prop | Default | |
@@ -31,13 +51,27 @@ import { EldenRingPotion } from 'game-style-icons/elden-ring';
 | `title` | none | Accessible name. Without it the icon gets `aria-hidden`. |
 | anything else | | Passed to the `<svg>`: `className`, `style`, `onClick`, `aria-*`... The `ref` is forwarded. |
 
-Import from a style's path (`game-style-icons/hades`) or from the root (`game-style-icons`); `"sideEffects": false` lets your bundler drop the icons you don't use. TypeScript types are included (`GameIconProps`, `GameIcon`) on every path. An icon is about 2 KB of markup on average (simple line styles about 0.6 KB; pixel and hand-drawn styles 3.5 to 5.5 KB).
+### SVG strings (server templates, Vue `v-html`, Svelte `{@html}`, vanilla JS)
 
-Plain SVGs are in `svg/<style>/<icon>.svg` (also importable as `game-style-icons/svg/<style>/<icon>.svg`), and `icons.json` lists every style, its prefix, category and component names.
+```js
+import { CyberpunkHeart } from 'game-style-icons/html/cyberpunk';
+
+el.innerHTML = CyberpunkHeart({ size: 32, title: 'Lives', class: 'icon' });
+```
+
+Each function returns a complete `<svg>` string; options are `size`, `title`, `class` and `attrs` (any other attributes). Every call gets its own ids, so the same icon can appear many times on a page.
+
+### Plain SVG files
+
+`svg/<style>/<icon>.svg`, for `<img>`, CSS backgrounds, design tools or anything else (also importable as `game-style-icons/svg/<style>/<icon>.svg`). `icons.json` lists every style, its prefix, category and icon names.
+
+### Size and types
+
+Import from a style's path (`game-style-icons/hades`, `game-style-icons/html/hades`) or from the root (`game-style-icons`, `game-style-icons/html`); bundlers drop the icons you don't use. TypeScript types are included for every path and for `<game-icon>`. An icon is about 2 KB of markup on average (simple line styles about 0.6 KB; pixel and hand-drawn styles 3.5 to 5.5 KB).
 
 ## Styles
 
-Component name = style prefix + icon name, e.g. `HollowKnightMapPin`, `PacManSword`, `TetrisGem`. Click a style to see all its icons on dark and light. Or clone the repo and open `preview.html`.
+Click a style to see all its icons on dark and light, or clone the repo and open `preview.html`.
 
 <!-- styles:start -->
 ### Neon and glow
@@ -145,7 +179,7 @@ The same 100 icons in every style: 72 for interfaces and 28 for games.
 Everything is generated by `gen.py` (Python 3, no dependencies):
 
 ```
-python3 gen.py   # rewrites src/, svg/, icons.json, preview.html, the exports in package.json and the tables in this README
+python3 gen.py   # rewrites src/ (React, html strings, web component), svg/, icons.json, preview.html, package.json exports and the tables in this README
 ```
 
 - `glyphs.py`: `GLYPHS`, each icon as paths on a 24-unit grid. A part is closed (may be filled), open, or an inner detail (drawn in a contrasting colour on filled styles). `PIXELS`: 12 hand-drawn Minecraft items.
