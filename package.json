@@ -1,7 +1,7 @@
 {
   "name": "game-style-icons",
-  "version": "0.1.0",
-  "description": "240 SVG icons as React components: 12 UI icons in 20 styles inspired by video games (Cyberpunk, Borderlands, GTA, Minecraft, Fallout...).",
+  "version": "0.2.0",
+  "description": "2,000 SVG icons as React components: 100 UI and game icons in 20 styles inspired by video games (Cyberpunk, Borderlands, GTA, Minecraft, Fallout...).",
   "type": "module",
   "sideEffects": false,
   "main": "./src/index.js",
@@ -125,16 +125,20 @@
     "react": ">=18"
   },
   "keywords": [
-    "icons",
-    "react",
-    "svg",
-    "react-icons",
+    "arcade",
+    "cyberpunk",
     "game",
     "gaming",
-    "pixel",
+    "hud",
+    "icons",
+    "minecraft",
     "neon",
-    "cyberpunk",
-    "minecraft"
+    "pixel",
+    "react",
+    "react-icons",
+    "retro",
+    "rpg",
+    "svg"
   ],
   "license": "MIT",
   "repository": {

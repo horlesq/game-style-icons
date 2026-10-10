@@ -7,6 +7,27 @@ live in glyphs.py. Run: python3 gen.py
 """
 import json, os, re, shutil
 from glyphs import GLYPHS, PIXELS
+import pixelize
+
+# Minecraft: material colour per icon for the generated pixel items (the hand-drawn ones in PIXELS keep their own)
+M = {'iron': '#a7adb5', 'stone': '#8d8d8d', 'gold': '#f2b81b', 'wood': '#a0703f', 'leather': '#9a5a2c', 'paper': '#ece4cc',
+     'redstone': '#d0301f', 'emerald': '#2fbf5b', 'lapis': '#3463cf', 'diamond': '#4fe0dc', 'amethyst': '#a65be0',
+     'orange': '#f07c1c', 'bone': '#e8e2d0', 'obsidian': '#4a4160', 'snow': '#f4f7fa', 'pink': '#ef7fb0'}
+MATERIAL = {
+    'menu': 'stone', 'close': 'redstone', 'arrow-left': 'stone', 'arrow-right': 'stone', 'arrow-up': 'stone', 'arrow-down': 'stone',
+    'chevron-down': 'stone', 'more': 'stone', 'external-link': 'lapis', 'plus': 'emerald', 'minus': 'redstone', 'check': 'emerald',
+    'edit': 'wood', 'trash': 'iron', 'download': 'emerald', 'upload': 'lapis', 'share': 'diamond', 'copy': 'paper', 'refresh': 'emerald',
+    'filter': 'iron', 'link': 'iron', 'unlock': 'gold', 'logout': 'wood', 'info': 'lapis', 'warning': 'gold', 'help': 'lapis',
+    'bell': 'gold', 'eye': 'snow', 'eye-off': 'snow', 'check-circle': 'emerald', 'play': 'emerald', 'pause': 'iron', 'skip': 'iron',
+    'volume': 'iron', 'mute': 'redstone', 'music': 'lapis', 'image': 'diamond', 'camera': 'stone', 'video': 'stone', 'chat': 'paper',
+    'phone': 'stone', 'users': 'lapis', 'send': 'diamond', 'calendar': 'paper', 'clock': 'gold', 'globe': 'lapis', 'cart': 'iron',
+    'gift': 'redstone', 'tag': 'gold', 'wallet': 'leather', 'card': 'lapis', 'file': 'paper', 'folder': 'gold', 'bookmark': 'redstone',
+    'chart': 'emerald', 'cloud': 'snow', 'sun': 'gold', 'moon': 'paper', 'wifi': 'lapis', 'flag': 'redstone', 'sword': 'diamond',
+    'axe': 'iron', 'bow': 'wood', 'potion': 'amethyst', 'trophy': 'gold', 'medal': 'gold', 'crown': 'gold', 'gamepad': 'obsidian',
+    'skull': 'bone', 'chest': 'wood', 'key': 'gold', 'scroll': 'paper', 'map': 'paper', 'compass': 'iron', 'bomb': 'obsidian',
+    'gem': 'diamond', 'dice': 'snow', 'target': 'redstone', 'fire': 'orange', 'zap': 'gold', 'ghost': 'snow', 'rocket': 'iron',
+    'hourglass': 'gold', 'puzzle': 'emerald', 'magic': 'amethyst', 'level-up': 'emerald', 'health': 'redstone', 'save': 'lapis',
+}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ICONS = list(GLYPHS)
@@ -60,7 +81,7 @@ def gta(parts, i):
 
 
 def minecraft(name):
-    pal, rows = PIXELS[name]
+    pal, rows = PIXELS[name] if name in PIXELS else pixelize.item(GLYPHS[name], M[MATERIAL[name]])
     rects = []
     for y, row in enumerate(rows):
         x = 0
@@ -234,7 +255,7 @@ def build():
     for slug, prefix, title, desc, fn in STYLES:
         os.makedirs(os.path.join(HERE, 'svg', slug))
         js = ["import { createIcon } from './_base.js';", '']
-        dts = ["import type { GameIcon } from './_base.js';", '']
+        dts = ["import type { GameIcon } from './_base.js';", "export type { GameIcon, GameIconProps } from './_base.js';", '']
         for i, name in enumerate(ICONS):
             mk = body(slug, fn, name, i)
             comp = prefix + pascal(name)
@@ -260,18 +281,23 @@ def build():
 def preview():
     rows = []
     for slug, prefix, title, desc, _ in STYLES:
-        # inline SVG so icons that use currentColor follow each row's text colour
-        svgs = {n: open(os.path.join(HERE, 'svg', slug, f'{n}.svg')).read().replace('width="24" height="24"', 'width="40" height="40"') for n in ICONS}
-        cells = ''.join(f'<figure>{svgs[n]}<figcaption>{prefix}{pascal(n)}</figcaption></figure>' for n in ICONS)
-        rows.append(f'<section><h2>{title} <code>{slug}</code></h2><p>{desc}</p><div class="row dark">{cells}</div><div class="row light">{cells}</div></section>')
+        inline = slug in ('portal', 'mirrors-edge')  # currentColor only works inline, not through <img>
+        def cell(n):
+            if inline:
+                svg = open(os.path.join(HERE, 'svg', slug, f'{n}.svg')).read().replace('width="24" height="24"', 'width="32" height="32"')
+            else:
+                svg = f'<img src="svg/{slug}/{n}.svg" width="32" height="32" alt="{n}" loading="lazy">'
+            return f'<figure title="{prefix}{pascal(n)}">{svg}</figure>'
+        cells = ''.join(cell(n) for n in ICONS)
+        rows.append(f'<section id="{slug}"><h2>{title} <code>{slug}</code></h2><p>{desc}</p><div class="row dark">{cells}</div><div class="row light">{cells}</div></section>')
     open(os.path.join(HERE, 'preview.html'), 'w').write(f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Game Style Icons</title><style>
 body{{margin:0;background:#16181c;color:#e9ebee;font:15px/1.5 system-ui,sans-serif}} main{{max-width:1180px;margin:0 auto;padding:32px 16px 64px}}
 h1{{font-size:28px;margin:0 0 4px}} header p{{color:#8d939b;margin:0 0 24px;max-width:72ch}}
 section{{padding:16px 0;border-top:1px solid #262a30}} h2{{font-size:17px;margin:0}} code{{font-size:12px;color:#8d939b;margin-left:6px}} section>p{{color:#8d939b;margin:2px 0 10px;font-size:14px}}
-.row{{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;padding:12px 8px;border-radius:10px}}
+.row{{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:10px 4px;padding:12px 8px;border-radius:10px}}
 .dark{{background:#0d0f12}} .light{{background:#f4f4f2;color:#1b1d21;margin-top:6px}}
-figure{{margin:0;text-align:center}} figure svg{{display:block;margin:0 auto}} figcaption{{font-size:9.5px;opacity:.6;margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+figure{{margin:0}} figure svg,figure img{{display:block;margin:0 auto}} @media (max-width:700px){{.row{{grid-template-columns:repeat(10,minmax(0,1fr))}}}}
 </style></head><body><main><header><h1>Game Style Icons</h1>
 <p>{len(ICONS)} icons in {len(STYLES)} styles inspired by video games, as React components and plain SVGs, shown on dark and light. Original artwork, no logos or characters; not affiliated with any game or publisher.</p></header>
 {"".join(rows)}</main></body></html>
