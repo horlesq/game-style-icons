@@ -1,0 +1,402 @@
+[
+ {
+  "style": "cyberpunk",
+  "prefix": "Cyberpunk",
+  "inspiredBy": "Cyberpunk 2077",
+  "look": "Neon yellow with a cyan/red glitch split",
+  "icons": [
+   "CyberpunkHome",
+   "CyberpunkSearch",
+   "CyberpunkSettings",
+   "CyberpunkUser",
+   "CyberpunkHeart",
+   "CyberpunkShield",
+   "CyberpunkStar",
+   "CyberpunkMapPin",
+   "CyberpunkBag",
+   "CyberpunkCoin",
+   "CyberpunkMail",
+   "CyberpunkLock"
+  ]
+ },
+ {
+  "style": "borderlands",
+  "prefix": "Borderlands",
+  "inspiredBy": "Borderlands",
+  "look": "Cel-shaded: heavy black ink outline, flat colour, comic drop shadow",
+  "icons": [
+   "BorderlandsHome",
+   "BorderlandsSearch",
+   "BorderlandsSettings",
+   "BorderlandsUser",
+   "BorderlandsHeart",
+   "BorderlandsShield",
+   "BorderlandsStar",
+   "BorderlandsMapPin",
+   "BorderlandsBag",
+   "BorderlandsCoin",
+   "BorderlandsMail",
+   "BorderlandsLock"
+  ]
+ },
+ {
+  "style": "gta",
+  "prefix": "Gta",
+  "inspiredBy": "Grand Theft Auto",
+  "look": "Radar blip: white glyph, black outline, soft shadow",
+  "icons": [
+   "GtaHome",
+   "GtaSearch",
+   "GtaSettings",
+   "GtaUser",
+   "GtaHeart",
+   "GtaShield",
+   "GtaStar",
+   "GtaMapPin",
+   "GtaBag",
+   "GtaCoin",
+   "GtaMail",
+   "GtaLock"
+  ]
+ },
+ {
+  "style": "minecraft",
+  "prefix": "Minecraft",
+  "inspiredBy": "Minecraft",
+  "look": "16x16 pixel items",
+  "icons": [
+   "MinecraftHome",
+   "MinecraftSearch",
+   "MinecraftSettings",
+   "MinecraftUser",
+   "MinecraftHeart",
+   "MinecraftShield",
+   "MinecraftStar",
+   "MinecraftMapPin",
+   "MinecraftBag",
+   "MinecraftCoin",
+   "MinecraftMail",
+   "MinecraftLock"
+  ]
+ },
+ {
+  "style": "fallout",
+  "prefix": "Fallout",
+  "inspiredBy": "Fallout",
+  "look": "Phosphor-green terminal line with glow",
+  "icons": [
+   "FalloutHome",
+   "FalloutSearch",
+   "FalloutSettings",
+   "FalloutUser",
+   "FalloutHeart",
+   "FalloutShield",
+   "FalloutStar",
+   "FalloutMapPin",
+   "FalloutBag",
+   "FalloutCoin",
+   "FalloutMail",
+   "FalloutLock"
+  ]
+ },
+ {
+  "style": "zelda",
+  "prefix": "Zelda",
+  "inspiredBy": "Zelda: Breath of the Wild",
+  "look": "Thin cyan slate line, soft glow, one orange spark",
+  "icons": [
+   "ZeldaHome",
+   "ZeldaSearch",
+   "ZeldaSettings",
+   "ZeldaUser",
+   "ZeldaHeart",
+   "ZeldaShield",
+   "ZeldaStar",
+   "ZeldaMapPin",
+   "ZeldaBag",
+   "ZeldaCoin",
+   "ZeldaMail",
+   "ZeldaLock"
+  ]
+ },
+ {
+  "style": "halo",
+  "prefix": "Halo",
+  "inspiredBy": "Halo",
+  "look": "Square-cut cyan HUD line with glow",
+  "icons": [
+   "HaloHome",
+   "HaloSearch",
+   "HaloSettings",
+   "HaloUser",
+   "HaloHeart",
+   "HaloShield",
+   "HaloStar",
+   "HaloMapPin",
+   "HaloBag",
+   "HaloCoin",
+   "HaloMail",
+   "HaloLock"
+  ]
+ },
+ {
+  "style": "persona",
+  "prefix": "Persona",
+  "inspiredBy": "Persona 5",
+  "look": "Tilted white cut-out, black outline, red offset",
+  "icons": [
+   "PersonaHome",
+   "PersonaSearch",
+   "PersonaSettings",
+   "PersonaUser",
+   "PersonaHeart",
+   "PersonaShield",
+   "PersonaStar",
+   "PersonaMapPin",
+   "PersonaBag",
+   "PersonaCoin",
+   "PersonaMail",
+   "PersonaLock"
+  ]
+ },
+ {
+  "style": "hollow-knight",
+  "prefix": "HollowKnight",
+  "inspiredBy": "Hollow Knight",
+  "look": "Pale thin ink with a faint halo",
+  "icons": [
+   "HollowKnightHome",
+   "HollowKnightSearch",
+   "HollowKnightSettings",
+   "HollowKnightUser",
+   "HollowKnightHeart",
+   "HollowKnightShield",
+   "HollowKnightStar",
+   "HollowKnightMapPin",
+   "HollowKnightBag",
+   "HollowKnightCoin",
+   "HollowKnightMail",
+   "HollowKnightLock"
+  ]
+ },
+ {
+  "style": "hades",
+  "prefix": "Hades",
+  "inspiredBy": "Hades",
+  "look": "Gold line over blood red, dark outline, ember glow",
+  "icons": [
+   "HadesHome",
+   "HadesSearch",
+   "HadesSettings",
+   "HadesUser",
+   "HadesHeart",
+   "HadesShield",
+   "HadesStar",
+   "HadesMapPin",
+   "HadesBag",
+   "HadesCoin",
+   "HadesMail",
+   "HadesLock"
+  ]
+ },
+ {
+  "style": "portal",
+  "prefix": "Portal",
+  "inspiredBy": "Portal",
+  "look": "Clean line in your text colour, blue details, orange and blue rings",
+  "icons": [
+   "PortalHome",
+   "PortalSearch",
+   "PortalSettings",
+   "PortalUser",
+   "PortalHeart",
+   "PortalShield",
+   "PortalStar",
+   "PortalMapPin",
+   "PortalBag",
+   "PortalCoin",
+   "PortalMail",
+   "PortalLock"
+  ]
+ },
+ {
+  "style": "mass-effect",
+  "prefix": "MassEffect",
+  "inspiredBy": "Mass Effect",
+  "look": "Orange holographic line with glow",
+  "icons": [
+   "MassEffectHome",
+   "MassEffectSearch",
+   "MassEffectSettings",
+   "MassEffectUser",
+   "MassEffectHeart",
+   "MassEffectShield",
+   "MassEffectStar",
+   "MassEffectMapPin",
+   "MassEffectBag",
+   "MassEffectCoin",
+   "MassEffectMail",
+   "MassEffectLock"
+  ]
+ },
+ {
+  "style": "doom",
+  "prefix": "Doom",
+  "inspiredBy": "Doom",
+  "look": "Hellfire-orange solid, hard dark outline, hot edge",
+  "icons": [
+   "DoomHome",
+   "DoomSearch",
+   "DoomSettings",
+   "DoomUser",
+   "DoomHeart",
+   "DoomShield",
+   "DoomStar",
+   "DoomMapPin",
+   "DoomBag",
+   "DoomCoin",
+   "DoomMail",
+   "DoomLock"
+  ]
+ },
+ {
+  "style": "splatoon",
+  "prefix": "Splatoon",
+  "inspiredBy": "Splatoon",
+  "look": "Neon ink fill, dark outline, ink droplets; colour changes per icon",
+  "icons": [
+   "SplatoonHome",
+   "SplatoonSearch",
+   "SplatoonSettings",
+   "SplatoonUser",
+   "SplatoonHeart",
+   "SplatoonShield",
+   "SplatoonStar",
+   "SplatoonMapPin",
+   "SplatoonBag",
+   "SplatoonCoin",
+   "SplatoonMail",
+   "SplatoonLock"
+  ]
+ },
+ {
+  "style": "animal-crossing",
+  "prefix": "AnimalCrossing",
+  "inspiredBy": "Animal Crossing",
+  "look": "Warm brown rounded line, honey fill, a leaf",
+  "icons": [
+   "AnimalCrossingHome",
+   "AnimalCrossingSearch",
+   "AnimalCrossingSettings",
+   "AnimalCrossingUser",
+   "AnimalCrossingHeart",
+   "AnimalCrossingShield",
+   "AnimalCrossingStar",
+   "AnimalCrossingMapPin",
+   "AnimalCrossingBag",
+   "AnimalCrossingCoin",
+   "AnimalCrossingMail",
+   "AnimalCrossingLock"
+  ]
+ },
+ {
+  "style": "hotline-miami",
+  "prefix": "Hotline",
+  "inspiredBy": "Hotline Miami",
+  "look": "Magenta-to-cyan gradient, glow and ghost offset",
+  "icons": [
+   "HotlineHome",
+   "HotlineSearch",
+   "HotlineSettings",
+   "HotlineUser",
+   "HotlineHeart",
+   "HotlineShield",
+   "HotlineStar",
+   "HotlineMapPin",
+   "HotlineBag",
+   "HotlineCoin",
+   "HotlineMail",
+   "HotlineLock"
+  ]
+ },
+ {
+  "style": "mirrors-edge",
+  "prefix": "MirrorsEdge",
+  "inspiredBy": "Mirror's Edge",
+  "look": "Minimal line in your text colour with runner-vision red",
+  "icons": [
+   "MirrorsEdgeHome",
+   "MirrorsEdgeSearch",
+   "MirrorsEdgeSettings",
+   "MirrorsEdgeUser",
+   "MirrorsEdgeHeart",
+   "MirrorsEdgeShield",
+   "MirrorsEdgeStar",
+   "MirrorsEdgeMapPin",
+   "MirrorsEdgeBag",
+   "MirrorsEdgeCoin",
+   "MirrorsEdgeMail",
+   "MirrorsEdgeLock"
+  ]
+ },
+ {
+  "style": "diablo",
+  "prefix": "Diablo",
+  "inspiredBy": "Diablo",
+  "look": "Bone-gold line over blood red, black outline, red glow",
+  "icons": [
+   "DiabloHome",
+   "DiabloSearch",
+   "DiabloSettings",
+   "DiabloUser",
+   "DiabloHeart",
+   "DiabloShield",
+   "DiabloStar",
+   "DiabloMapPin",
+   "DiabloBag",
+   "DiabloCoin",
+   "DiabloMail",
+   "DiabloLock"
+  ]
+ },
+ {
+  "style": "pac-man",
+  "prefix": "PacMan",
+  "inspiredBy": "Pac-Man",
+  "look": "Arcade maze: double blue walls, hollow inside",
+  "icons": [
+   "PacManHome",
+   "PacManSearch",
+   "PacManSettings",
+   "PacManUser",
+   "PacManHeart",
+   "PacManShield",
+   "PacManStar",
+   "PacManMapPin",
+   "PacManBag",
+   "PacManCoin",
+   "PacManMail",
+   "PacManLock"
+  ]
+ },
+ {
+  "style": "overwatch",
+  "prefix": "Overwatch",
+  "inspiredBy": "Overwatch",
+  "look": "Bold white line, orange fill, slate edge",
+  "icons": [
+   "OverwatchHome",
+   "OverwatchSearch",
+   "OverwatchSettings",
+   "OverwatchUser",
+   "OverwatchHeart",
+   "OverwatchShield",
+   "OverwatchStar",
+   "OverwatchMapPin",
+   "OverwatchBag",
+   "OverwatchCoin",
+   "OverwatchMail",
+   "OverwatchLock"
+  ]
+ }
+]

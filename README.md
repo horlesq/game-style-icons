@@ -1,68 +1,79 @@
 # Game Style Icons
 
-12 interface icons redrawn in 20 styles inspired by video games: 240 SVGs, 64×64, no external fonts or images.
+12 icons in 20 styles inspired by video games, as **React components** (like react-icons) and plain SVGs. 240 icons, no backgrounds, 60 KB for the whole package, tree-shakable.
 
-![Cyberpunk, Borderlands, GTA, Minecraft](docs/preview-1.png)
+![Cyberpunk, Borderlands, GTA, Minecraft on dark and light](docs/preview-1.png)
 
-Icons: `home`, `search`, `settings`, `user`, `heart`, `shield`, `star`, `map-pin`, `bag`, `coin`, `mail`, `lock`.
+## Install
 
-## Styles
+From GitHub (until it is published on npm):
 
-| Folder | Inspired by | Look |
-|---|---|---|
-| `cyberpunk-2077` | Cyberpunk 2077 | Neon yellow on black, chamfered frame, chromatic glitch split |
-| `borderlands` | Borderlands | Cel-shaded: heavy black ink outlines, hand-drawn blobs, hatching |
-| `gta` | Grand Theft Auto | Radar blips: white glyphs with black outline on a dark minimap disc |
-| `minecraft` | Minecraft | 16x16 pixel items in an inventory slot |
-| `fallout` | Fallout | Monochrome green CRT terminal with scanlines and phosphor glow |
-| `zelda-botw` | Zelda: Breath of the Wild | Slate tablet UI: thin cyan lines, dotted rings, one orange spark |
-| `halo` | Halo | Hexagonal HUD frame, cyan glow, corner brackets |
-| `persona-5` | Persona 5 | Red burst, black slash, tilted white cut-out glyph |
-| `hollow-knight` | Hollow Knight | Pale ink on deep night, thin ring and curled ornament |
-| `hades` | Hades | Boon medallion: blood-red core, gold rings and rays |
-| `portal` | Portal | Clean test-chamber tile, dark linework, orange and blue rings |
-| `mass-effect` | Mass Effect | Orange holographic omni-tool rings and glow |
-| `doom` | Doom | Riveted gunmetal plate, hellfire-orange glyph with hard outline |
-| `splatoon` | Splatoon | Neon ink splats with drips, white glyph, rotating ink colours |
-| `animal-crossing` | Animal Crossing | Soft cream card, leaf-green border, warm brown rounded lines |
-| `hotline-miami` | Hotline Miami | Synthwave: magenta-to-cyan glow, VHS lines, ghost offset |
-| `mirrors-edge` | Mirror's Edge | White minimal, black line glyph, runner-vision red highlight |
-| `diablo` | Diablo | Gothic medallion: gold spikes and ring, bone glyph over blood red |
-| `pac-man` | Pac-Man | Arcade maze: double blue walls on black, pellets |
-| `overwatch` | Overwatch | Slanted slate card, orange stripe, bold white glyph |
+```
+npm install github:horlesq/game-style-icons
+```
 
-More previews: [Fallout to Persona 5](docs/preview-2.png) · [Hollow Knight to Mass Effect](docs/preview-3.png) · [Doom to Hotline Miami](docs/preview-4.png) · [Mirror's Edge to Overwatch](docs/preview-5.png). Open `preview.html` for all of them.
+React 18 or newer.
 
 ## Use
 
-Single file:
+```jsx
+import { CyberpunkHeart, CyberpunkCoin } from 'game-style-icons/cyberpunk';
+import { MinecraftStar } from 'game-style-icons/minecraft';
 
-```html
-<img src="icons/cyberpunk-2077/home.svg" width="64" height="64" alt="Home">
+<CyberpunkHeart />                       // 1em, follows the font size
+<CyberpunkCoin size={32} title="Coins" />  // accessible name; without title the icon is aria-hidden
+<MinecraftStar className="icon" style={{ verticalAlign: 'middle' }} />
 ```
 
-Sprite (one file per style, every symbol id is `<style>-<icon>`):
+Every component forwards its `ref` and passes any other prop to the `<svg>` (`className`, `style`, `onClick`, ...). Import from the style's path (`game-style-icons/hades`) or from the root (`game-style-icons`); unused icons are dropped by your bundler. TypeScript types are included (`GameIconProps`, `GameIcon`).
 
-```html
-<svg width="48" height="48"><use href="sprites/hades.svg#hades-heart"/></svg>
-```
+Without React, use the files in `svg/<style>/<icon>.svg` (24×24).
 
-The SVGs scale to any size. Some styles use SVG filters for glow (Cyberpunk, Fallout, Zelda, Halo, Hollow Knight, Mass Effect, Hotline Miami); every browser renders them, a few design tools ignore them. Each file has a `<title>` and `aria-label`.
+Icons in each style: `Home`, `Search`, `Settings`, `User`, `Heart`, `Shield`, `Star`, `MapPin`, `Bag`, `Coin`, `Mail`, `Lock`. Component name = prefix + icon, e.g. `HollowKnightMapPin`, `PacManLock`.
+
+## Styles
+
+| Import | Prefix | Inspired by | Look |
+|---|---|---|---|
+| `game-style-icons/cyberpunk` | `Cyberpunk…` | Cyberpunk 2077 | Neon yellow with a cyan/red glitch split |
+| `game-style-icons/borderlands` | `Borderlands…` | Borderlands | Cel-shaded: heavy black ink outline, flat colour, comic drop shadow |
+| `game-style-icons/gta` | `Gta…` | Grand Theft Auto | Radar blip: white glyph, black outline, soft shadow |
+| `game-style-icons/minecraft` | `Minecraft…` | Minecraft | 16x16 pixel items |
+| `game-style-icons/fallout` | `Fallout…` | Fallout | Phosphor-green terminal line with glow |
+| `game-style-icons/zelda` | `Zelda…` | Zelda: Breath of the Wild | Thin cyan slate line, soft glow, one orange spark |
+| `game-style-icons/halo` | `Halo…` | Halo | Square-cut cyan HUD line with glow |
+| `game-style-icons/persona` | `Persona…` | Persona 5 | Tilted white cut-out, black outline, red offset |
+| `game-style-icons/hollow-knight` | `HollowKnight…` | Hollow Knight | Pale thin ink with a faint halo |
+| `game-style-icons/hades` | `Hades…` | Hades | Gold line over blood red, dark outline, ember glow |
+| `game-style-icons/portal` | `Portal…` | Portal | Clean line in your text colour, blue details, orange and blue rings |
+| `game-style-icons/mass-effect` | `MassEffect…` | Mass Effect | Orange holographic line with glow |
+| `game-style-icons/doom` | `Doom…` | Doom | Hellfire-orange solid, hard dark outline, hot edge |
+| `game-style-icons/splatoon` | `Splatoon…` | Splatoon | Neon ink fill, dark outline, ink droplets; colour changes per icon |
+| `game-style-icons/animal-crossing` | `AnimalCrossing…` | Animal Crossing | Warm brown rounded line, honey fill, a leaf |
+| `game-style-icons/hotline-miami` | `Hotline…` | Hotline Miami | Magenta-to-cyan gradient, glow and ghost offset |
+| `game-style-icons/mirrors-edge` | `MirrorsEdge…` | Mirror's Edge | Minimal line in your text colour with runner-vision red |
+| `game-style-icons/diablo` | `Diablo…` | Diablo | Bone-gold line over blood red, black outline, red glow |
+| `game-style-icons/pac-man` | `PacMan…` | Pac-Man | Arcade maze: double blue walls, hollow inside |
+| `game-style-icons/overwatch` | `Overwatch…` | Overwatch | Bold white line, orange fill, slate edge |
+
+`portal` and `mirrors-edge` draw their main line in `currentColor`, so they follow your text colour. The other styles keep their own palette; the glowing ones have a thin dark rim so they also read on light backgrounds.
+
+More previews (dark and light): [Fallout to Persona 5](docs/preview-2.png) · [Hollow Knight to Mass Effect](docs/preview-3.png) · [Doom to Hotline Miami](docs/preview-4.png) · [Mirror's Edge to Overwatch](docs/preview-5.png), or open `preview.html`.
 
 ## Change or extend
 
-Everything is generated by `gen.py` (Python 3, no dependencies):
+Everything is generated by `gen.py` (Python 3, no dependencies) from `glyphs.py`:
 
-- **Glyphs**: `GLYPHS` holds each icon as stroke paths on a 24-unit grid. Each part is marked closed (a style may fill it), open, or an inner detail (drawn dark on filled styles).
-- **Minecraft**: `PIXELS` holds hand-drawn 16×16 bitmaps with a small palette per icon.
-- **Styles**: one function per style in `STYLES`, returning the 64×64 artwork.
+- `GLYPHS`: each icon as stroke paths on a 24-unit grid; parts are closed (may be filled), open, or inner details (drawn dark on filled styles).
+- `PIXELS`: the Minecraft items, hand-drawn 16×16 with a small palette each.
+- `STYLES` in `gen.py`: one function per style. Glows are drawn as soft wide strokes (no SVG filters); the few masks and gradients get unique ids per rendered icon.
 
 ```
-python3 gen.py   # rewrites icons/, sprites/ and preview.html
+python3 gen.py   # rewrites src/, svg/, icons.json and preview.html
 ```
 
 ## Note
 
-Original artwork that borrows the general visual language of each game (colours, line treatment, frames). It contains no logos, characters, fonts or assets from any game. Game names are trademarks of their owners and are used only to describe the style; this project is not affiliated with or endorsed by any of them.
+Original artwork that borrows the general visual language of each game (colours, line treatment, effects). It contains no logos, characters, fonts or assets from any game. Game names are trademarks of their owners and are used only to describe the style; this project is not affiliated with or endorsed by any of them.
 
 MIT licence.

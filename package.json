@@ -1,0 +1,144 @@
+{
+  "name": "game-style-icons",
+  "version": "0.1.0",
+  "description": "240 SVG icons as React components: 12 UI icons in 20 styles inspired by video games (Cyberpunk, Borderlands, GTA, Minecraft, Fallout...).",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./cyberpunk": {
+      "types": "./src/cyberpunk.d.ts",
+      "import": "./src/cyberpunk.js",
+      "default": "./src/cyberpunk.js"
+    },
+    "./borderlands": {
+      "types": "./src/borderlands.d.ts",
+      "import": "./src/borderlands.js",
+      "default": "./src/borderlands.js"
+    },
+    "./gta": {
+      "types": "./src/gta.d.ts",
+      "import": "./src/gta.js",
+      "default": "./src/gta.js"
+    },
+    "./minecraft": {
+      "types": "./src/minecraft.d.ts",
+      "import": "./src/minecraft.js",
+      "default": "./src/minecraft.js"
+    },
+    "./fallout": {
+      "types": "./src/fallout.d.ts",
+      "import": "./src/fallout.js",
+      "default": "./src/fallout.js"
+    },
+    "./zelda": {
+      "types": "./src/zelda.d.ts",
+      "import": "./src/zelda.js",
+      "default": "./src/zelda.js"
+    },
+    "./halo": {
+      "types": "./src/halo.d.ts",
+      "import": "./src/halo.js",
+      "default": "./src/halo.js"
+    },
+    "./persona": {
+      "types": "./src/persona.d.ts",
+      "import": "./src/persona.js",
+      "default": "./src/persona.js"
+    },
+    "./hollow-knight": {
+      "types": "./src/hollow-knight.d.ts",
+      "import": "./src/hollow-knight.js",
+      "default": "./src/hollow-knight.js"
+    },
+    "./hades": {
+      "types": "./src/hades.d.ts",
+      "import": "./src/hades.js",
+      "default": "./src/hades.js"
+    },
+    "./portal": {
+      "types": "./src/portal.d.ts",
+      "import": "./src/portal.js",
+      "default": "./src/portal.js"
+    },
+    "./mass-effect": {
+      "types": "./src/mass-effect.d.ts",
+      "import": "./src/mass-effect.js",
+      "default": "./src/mass-effect.js"
+    },
+    "./doom": {
+      "types": "./src/doom.d.ts",
+      "import": "./src/doom.js",
+      "default": "./src/doom.js"
+    },
+    "./splatoon": {
+      "types": "./src/splatoon.d.ts",
+      "import": "./src/splatoon.js",
+      "default": "./src/splatoon.js"
+    },
+    "./animal-crossing": {
+      "types": "./src/animal-crossing.d.ts",
+      "import": "./src/animal-crossing.js",
+      "default": "./src/animal-crossing.js"
+    },
+    "./hotline-miami": {
+      "types": "./src/hotline-miami.d.ts",
+      "import": "./src/hotline-miami.js",
+      "default": "./src/hotline-miami.js"
+    },
+    "./mirrors-edge": {
+      "types": "./src/mirrors-edge.d.ts",
+      "import": "./src/mirrors-edge.js",
+      "default": "./src/mirrors-edge.js"
+    },
+    "./diablo": {
+      "types": "./src/diablo.d.ts",
+      "import": "./src/diablo.js",
+      "default": "./src/diablo.js"
+    },
+    "./pac-man": {
+      "types": "./src/pac-man.d.ts",
+      "import": "./src/pac-man.js",
+      "default": "./src/pac-man.js"
+    },
+    "./overwatch": {
+      "types": "./src/overwatch.d.ts",
+      "import": "./src/overwatch.js",
+      "default": "./src/overwatch.js"
+    },
+    "./svg/*": "./svg/*",
+    "./icons.json": "./icons.json"
+  },
+  "files": [
+    "src",
+    "svg",
+    "icons.json"
+  ],
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "keywords": [
+    "icons",
+    "react",
+    "svg",
+    "react-icons",
+    "game",
+    "gaming",
+    "pixel",
+    "neon",
+    "cyberpunk",
+    "minecraft"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/horlesq/game-style-icons.git"
+  }
+}
