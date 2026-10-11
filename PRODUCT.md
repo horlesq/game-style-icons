@@ -24,7 +24,7 @@ The same 100 icons exist in every style, built from one glyph set, so changing a
 
 ## Operating Context
 
-- Install: `npm install github:horlesq/game-style-icons` (not on npm), or no install: `<script type="module" src="https://cdn.jsdelivr.net/gh/horlesq/game-style-icons@v0.4.0/src/element.js">`.
+- Install: `npm install game-style-icons` (on npm since 2026-10-11, v1.0.0), or no install: `<script type="module" src="https://cdn.jsdelivr.net/npm/game-style-icons@1/src/element.js">`.
 - Web component: `import 'game-style-icons/element'` then `<game-icon set="cyberpunk" name="heart" size="32" label="Lives">`.
 - React: `import { CyberpunkHeart } from 'game-style-icons/cyberpunk'` (React 18+). SVG strings: `import { CyberpunkHeart } from 'game-style-icons/html/cyberpunk'`, `CyberpunkHeart({ size: 32 })`.
 - Names: style prefix + icon name, identical across React and strings; the web component takes the style slug and kebab icon name.
@@ -37,7 +37,7 @@ The same 100 icons exist in every style, built from one glyph set, so changing a
 - 50 styles in 6 categories: Neon and glow, Bold cartoon, Pixel and arcade, Ink and paint, Metal stone and dark fantasy, Flat and graphic.
 - `portal` and `mirrors-edge` use `currentColor` (follow text colour); some styles change colour per icon (Splatoon, Among Us, Tetris, Fortnite, LittleBigPlanet, Borderlands).
 - Pixel styles use their own grids (16, 13 or 12 units).
-- Not on npm: never show npm badges, weekly downloads or `npm i game-style-icons` without the GitHub prefix.
+- On npm, but no download or usage numbers exist yet: never invent badges, counts or testimonials.
 - Contains no game logos, characters, fonts or assets; game names are trademarks of their owners, used only to describe styles; not affiliated with or endorsed by any game or publisher. The page must keep that statement and must not use game logos or official artwork.
 
 ## Brand Commitments
@@ -55,5 +55,5 @@ The same 100 icons exist in every style, built from one glyph set, so changing a
 
 1. The icons are the pitch: show many real icons early, in many styles, rather than describing them.
 2. One copy away: the install command and any icon's import are copyable in one action.
-3. Honest about the state: GitHub install, not on npm, original artwork, not affiliated with the games.
+3. Honest about the state: original artwork, not affiliated with the games, no invented popularity.
 4. Respect the games: borrow a style's visual language, never its logos or assets.

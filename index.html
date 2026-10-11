@@ -48,7 +48,7 @@
             <button role="tab" id="tab-cdn" aria-selected="false" aria-controls="slot-code" data-install-tab="cdn">No install (CDN)</button>
           </div>
           <div class="slot-row" id="slot-code" role="tabpanel">
-            <code class="slot-code" data-install-code>npm install github:horlesq/game-style-icons</code>
+            <code class="slot-code" data-install-code>npm install game-style-icons</code>
             <button class="btn btn-primary" data-copy-install><span class="ui-icon" data-icon="copy"></span><span data-label>Copy</span></button>
           </div>
         </div>
@@ -79,8 +79,8 @@
         <ol class="steps">
           <li>
             <h3>Insert the Game Pak</h3>
-            <p>Install the package from GitHub. It is not on npm yet. No build step? Load the web component from a CDN and skip the install.</p>
-            <pre class="code"><code>npm install github:horlesq/game-style-icons</code></pre>
+            <p>Install the package from npm. No build step? Load the web component from a CDN and skip the install.</p>
+            <pre class="code"><code>npm install game-style-icons</code></pre>
           </li>
           <li>
             <h3>Pick how you play</h3>
@@ -231,7 +231,7 @@
         </div>
         <h3 class="sub">Precautions</h3>
         <ul class="precautions">
-          <li>Not on npm yet. Install from GitHub, or load the web component from the CDN.</li>
+          <li>React is optional: only the React components need it (React 18 or newer).</li>
           <li><code>portal</code> and <code>mirrors-edge</code> draw in your text colour. Every other world keeps its own palette, with a thin dark rim so it reads on light pages too.</li>
           <li>Pixel worlds draw on their own grid (16, 13 or 12 cells) and stay sharp at any size.</li>
           <li>A few worlds change colour from item to item, like Tetris pieces or Splatoon ink.</li>
@@ -256,7 +256,7 @@
 </main>
 
 <footer class="back">
-  <p>Game Style Icons <span data-version>v0.4.0</span> · MIT · Made by Adrian Horlescu</p>
+  <p>Game Style Icons <span data-version>v1.0.0</span> · MIT · Made by Adrian Horlescu</p>
 </footer>
 <div class="visually-hidden" aria-live="polite" data-announce></div>
 </body>

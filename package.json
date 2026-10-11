@@ -1,6 +1,6 @@
 {
   "name": "game-style-icons",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "100 UI and game icons in 50 styles inspired by video games (5,000 SVG icons): React components, a <game-icon> web component for any framework, SVG strings and plain SVG files.",
   "type": "module",
   "sideEffects": [

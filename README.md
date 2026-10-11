@@ -9,10 +9,10 @@
 ## Install
 
 ```
-npm install github:horlesq/game-style-icons
+npm install game-style-icons
 ```
 
-Not on npm yet. React is optional: only the React components need it (18 or newer).
+React is optional: only the React components need it (18 or newer).
 
 ## Use
 
@@ -31,7 +31,7 @@ Every icon has the same name everywhere: style prefix + icon name, e.g. `Cyberpu
 No build step? Load it from a CDN:
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/gh/horlesq/game-style-icons@v0.4.0/src/element.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/game-style-icons@1/src/element.js"></script>
 ```
 
 `set` is the style, `name` the icon (in kebab case: `map-pin`, `level-up`), `size` a number (px) or any CSS length, `label` the accessible name (without it the icon is `aria-hidden`). Changing an attribute re-renders. The element loads a style's icons the first time that style is used, and draws inside its own shadow root, so ids never clash. Style it like an image: `game-icon { width: 40px; height: 40px }` overrides `size`.

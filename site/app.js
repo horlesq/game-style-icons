@@ -7,7 +7,7 @@ const STYLES = data.styles;
 const BY = Object.fromEntries(STYLES.map((s) => [s.slug, s]));
 const ICONS = data.icons;
 const REPO = 'https://github.com/horlesq/game-style-icons';
-const CDN = `https://cdn.jsdelivr.net/gh/horlesq/game-style-icons@v${data.version}`;
+const CDN = `https://cdn.jsdelivr.net/npm/game-style-icons@${data.version.split('.')[0]}`;
 const SIZES = [16, 24, 32, 48, 64, 96, 128];
 const STACKS = ['element', 'react', 'string', 'svg'];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -108,7 +108,7 @@ async function copy(text, btn, done = 'Copied') {
 }
 
 // ---------- cover: install slot and the stepping item box
-const INSTALL = { npm: 'npm install github:horlesq/game-style-icons', cdn: `<script type="module" src="${CDN}/src/element.js"></script>` };
+const INSTALL = { npm: 'npm install game-style-icons', cdn: `<script type="module" src="${CDN}/src/element.js"></script>` };
 let installTab = 'npm';
 $$('[data-install-tab]').forEach((b) => b.addEventListener('click', () => {
   installTab = b.dataset.installTab;
